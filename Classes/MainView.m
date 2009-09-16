@@ -1,32 +1,20 @@
-//
-//  MainView.m
-//  MagicNumber
-//
-//  Created by Wang Chun on 2009-09-16.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
-//
-
 #import "MainView.h"
 
 @implementation MainView
 
-
 - (id)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        // Initialization code
-    }
-    return self;
+	if (self = [super initWithFrame:frame]) {
+		// Initialization code
+	}
+	return self;
 }
-
 
 - (void)drawRect:(CGRect)rect {
-    // Drawing code
+	// Drawing code
 }
-
 
 - (void)dealloc {
-    [super dealloc];
+	[super dealloc];
 }
-
 
 @end

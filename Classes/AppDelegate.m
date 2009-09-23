@@ -1,7 +1,7 @@
-#import "MagicNumberAppDelegate.h"
+#import "AppDelegate.h"
 #import "MainViewController.h"
 
-@implementation MagicNumberAppDelegate
+@implementation AppDelegate
 
 @synthesize window;
 @synthesize mainViewController;

@@ -3,27 +3,18 @@
 
 @implementation MainViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-	if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-		// Custom initialization
-	}
-	return self;
+@synthesize label;
+
+- (void)viewWillAppear:(BOOL)animated {
+	[super viewWillAppear:animated];
+	timer = [NSTimer scheduledTimerWithTimeInterval:0.200 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
 }
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-	[super viewDidLoad];
+- (void)viewDidDisappear:(BOOL)animated	{
+	[super viewDidDisappear:animated];
+	[timer invalidate];
+	timer = nil;
 }
-*/
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
 
 - (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller {
 	[self dismissModalViewControllerAnimated:YES];
@@ -37,27 +28,8 @@
 	[controller release];
 }
 
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-	[super didReceiveMemoryWarning];
-	// Release any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
-- (void)dealloc {
-	[super dealloc];
+- (void)timerFireMethod:(NSTimer *)theTimer {
+	[label setText:[[NSDate date] description]];
 }
 
 @end

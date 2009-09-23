@@ -1,6 +1,6 @@
 @class MainViewController;
 
-@interface MagicNumberAppDelegate : NSObject <UIApplicationDelegate> {
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
 	UIWindow *window;
 	MainViewController *mainViewController;
 }

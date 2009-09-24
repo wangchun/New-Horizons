@@ -8,6 +8,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	timer = [NSTimer scheduledTimerWithTimeInterval:0.200 target:self selector:@selector(timerFireMethod:) userInfo:nil repeats:YES];
+	[self timerFireMethod:timer];
 }
 
 - (void)viewDidDisappear:(BOOL)animated	{
@@ -20,16 +21,16 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+- (void)timerFireMethod:(NSTimer *)theTimer {
+	[label setText:[[NSDate date] description]];
+}
+
 - (IBAction)showInfo {
 	FlipsideViewController *controller = [[FlipsideViewController alloc] initWithNibName:@"FlipsideView" bundle:nil];
 	controller.delegate = self;
 	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
 	[self presentModalViewController:controller animated:YES];
 	[controller release];
-}
-
-- (void)timerFireMethod:(NSTimer *)theTimer {
-	[label setText:[[NSDate date] description]];
 }
 
 @end

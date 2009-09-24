@@ -7,6 +7,8 @@
 
 @property (nonatomic, retain) IBOutlet UILabel *label;
 
+- (void)timerFireMethod:(NSTimer *)theTimer;
+
 - (IBAction)showInfo;
 
 @end

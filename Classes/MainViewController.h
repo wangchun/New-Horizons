@@ -1,11 +1,14 @@
 #import "FlipsideViewController.h"
 
 @interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
+
 	NSTimer *timer;
-	UILabel *label;
+	UILabel *timeLabel;
+	UILabel *distanceLabel;
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *label;
+@property (nonatomic, retain) IBOutlet UILabel *timeLabel;
+@property (nonatomic, retain) IBOutlet UILabel *distanceLabel;
 
 - (void)timerFireMethod:(NSTimer *)theTimer;
 

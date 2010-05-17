@@ -3,6 +3,7 @@
 @implementation MainView
 
 - (id)initWithFrame:(CGRect)frame {
+
 	if (self = [super initWithFrame:frame]) {
 		// Initialization code
 	}
@@ -10,10 +11,12 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+
 	// Drawing code
 }
 
 - (void)dealloc {
+
 	[super dealloc];
 }
 

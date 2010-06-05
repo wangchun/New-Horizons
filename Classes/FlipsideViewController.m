@@ -8,13 +8,23 @@
 
 @synthesize metricSegmentedControl;
 
+- (id)initWithPageNumber:(int)page {
+
+	if (self = [super initWithNibName:@"FlipsideView" bundle:nil]) {
+		pageNumber = page;
+	}
+	return self;
+}
+
 - (void)viewDidLoad {
 
 	[super viewDidLoad];
 
 	self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
 
-	if ([[((AppDelegate *)[UIApplication sharedApplication].delegate).settings objectForKey:@"metric"] boolValue]) {
+	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
+	if ([[[[appDelegate.settings objectForKey:@"pages"] objectAtIndex:pageNumber] objectForKey:@"metric"] boolValue]) {
 		metricSegmentedControl.selectedSegmentIndex = 0;
 	} else {
 		metricSegmentedControl.selectedSegmentIndex = 1;
@@ -28,20 +38,28 @@
 
 - (IBAction)metric {
 
+	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
 	if (metricSegmentedControl.selectedSegmentIndex == 0) {
-		[((AppDelegate *)[UIApplication sharedApplication].delegate).settings setObject:[NSNumber numberWithBool:YES] forKey:@"metric"];
+		[[[appDelegate.settings objectForKey:@"pages"] objectAtIndex:pageNumber] setObject:[NSNumber numberWithBool:YES] forKey:@"metric"];
+		[appDelegate saveSettings];
 	}
 	if (metricSegmentedControl.selectedSegmentIndex == 1) {
-		[((AppDelegate *)[UIApplication sharedApplication].delegate).settings setObject:[NSNumber numberWithBool:NO] forKey:@"metric"];
+		[[[appDelegate.settings objectForKey:@"pages"] objectAtIndex:pageNumber] setObject:[NSNumber numberWithBool:NO] forKey:@"metric"];
+		[appDelegate saveSettings];
 	}
-
-	NSString *settingsPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"Settings.plist"];
-	[[NSPropertyListSerialization dataFromPropertyList:((AppDelegate *)[UIApplication sharedApplication].delegate).settings format:NSPropertyListBinaryFormat_v1_0 errorDescription:nil] writeToFile:settingsPath atomically:YES];
 }
 
 - (IBAction)link {
 
 	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://pluto.jhuapl.edu/"]];
+}
+
+- (void)dealloc {
+
+	[metricSegmentedControl release];
+
+	[super dealloc];
 }
 
 @end

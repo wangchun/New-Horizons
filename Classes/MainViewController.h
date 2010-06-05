@@ -1,17 +1,21 @@
-#import "FlipsideViewController.h"
+@interface MainViewController : UIViewController <UIScrollViewDelegate> {
 
-@interface MainViewController : UIViewController <FlipsideViewControllerDelegate> {
-
+	UIScrollView *scrollView;
+	UIPageControl *pageControl;
+	NSMutableArray *viewControllers;
 	NSTimer *timer;
-	UILabel *timeLabel;
-	UILabel *distanceLabel;
+
+	BOOL pageControlUsed;
 }
 
-@property (nonatomic, retain) IBOutlet UILabel *timeLabel;
-@property (nonatomic, retain) IBOutlet UILabel *distanceLabel;
+@property (nonatomic, retain) IBOutlet UIScrollView *scrollView;
+@property (nonatomic, retain) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, retain) NSMutableArray *viewControllers;
 
-- (void)timerFireMethod:(NSTimer *)theTimer;
+- (IBAction)changePage:(id)sender;
 
-- (IBAction)showInfo;
+- (void)loadScrollViewWithPage:(int)page;
+
+- (void)timerFired:(NSTimer *)theTimer;
 
 @end

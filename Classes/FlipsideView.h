@@ -1,5 +1,0 @@
-@interface FlipsideView : UIView {
-
-}
-
-@end

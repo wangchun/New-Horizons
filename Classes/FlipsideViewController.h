@@ -5,6 +5,8 @@
 	id <FlipsideViewControllerDelegate> delegate;
 
 	UISegmentedControl *metricSegmentedControl;
+
+	int pageNumber;
 }
 
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;

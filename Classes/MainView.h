@@ -1,5 +1,0 @@
-@interface MainView : UIView {
-
-}
-
-@end

@@ -111,6 +111,8 @@
 		controller.view.frame = frame;
 		[scrollView addSubview:controller.view];
 	}
+
+	[self timerFired:timer];
 }
 
 - (void)timerFired:(NSTimer *)theTimer {

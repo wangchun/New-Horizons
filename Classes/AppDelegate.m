@@ -1,7 +1,5 @@
 #import "AppDelegate.h"
 
-#import "MainViewController.h"
-
 #include <sqlite3.h>
 
 static NSUInteger kNumberOfPages = 6;
@@ -112,7 +110,7 @@ static NSUInteger kNumberOfPages = 6;
 	NSTimeInterval timeInterval2 = [[NSDate date] timeIntervalSinceReferenceDate];
 	for (int i = 0; i < 144; ++i) {
 		double interval = 0.0;
-		if (fabs(timeInterval2 - timeInterval1) < 1e-12) {
+		if (fabs(timeInterval2 - timeInterval1) < 0.001) {
 			break;
 		} else if (timeInterval2 - timeInterval1 > 0.0) {
 			if (timeInterval2 - timeInterval1 < 600.0) {
@@ -147,8 +145,8 @@ static NSUInteger kNumberOfPages = 6;
 				vectors2[6] += z * t2;
 			}
 		}
-		for (int a = [keys count] - 1; a >= 0; --a) {
-			double *vectors = [[data objectForKey:[keys objectAtIndex:a]] mutableBytes];
+		for (int x = [keys count] - 1; x >= 0; --x) {
+			double *vectors = [[data objectForKey:[keys objectAtIndex:x]] mutableBytes];
 			vectors[1] += vectors[4] * interval;
 			vectors[2] += vectors[5] * interval;
 			vectors[3] += vectors[6] * interval;

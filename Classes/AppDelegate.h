@@ -1,4 +1,4 @@
-@class MainViewController;
+#import "MainViewController.h"
 
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
 

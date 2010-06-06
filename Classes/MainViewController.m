@@ -36,6 +36,7 @@
 	[super viewWillAppear:animated];
 
 	timer = [NSTimer scheduledTimerWithTimeInterval:0.100 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+	[[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 	[self timerFired:timer];
 }
 
@@ -111,8 +112,6 @@
 		controller.view.frame = frame;
 		[scrollView addSubview:controller.view];
 	}
-
-	[self timerFired:timer];
 }
 
 - (void)timerFired:(NSTimer *)theTimer {

@@ -108,21 +108,21 @@ static NSUInteger kNumberOfPages = 6;
 
 	NSTimeInterval timeInterval1 = [date timeIntervalSinceReferenceDate];
 	NSTimeInterval timeInterval2 = [[NSDate date] timeIntervalSinceReferenceDate];
-	for (int i = 0; i < 144; ++i) {
+	for (int i = 0; i <= 144; ++i) {
 		double interval = 0.0;
 		if (fabs(timeInterval2 - timeInterval1) < 0.001) {
 			break;
 		} else if (timeInterval2 - timeInterval1 > 0.0) {
-			if (timeInterval2 - timeInterval1 < 600.0) {
+			if (timeInterval2 - timeInterval1 < 300.0) {
 				interval = timeInterval2 - timeInterval1;
 			} else {
-				interval = 600.0;
+				interval = 300.0;
 			}
 		} else if (timeInterval2 - timeInterval1 < 0.0) {
-			if (timeInterval2 - timeInterval1 > -600.0) {
+			if (timeInterval2 - timeInterval1 > -300.0) {
 				interval = timeInterval2 - timeInterval1;
 			} else {
-				interval = -600.0;
+				interval = -300.0;
 			}
 		}
 		NSArray *keys = [data allKeys];
@@ -158,17 +158,17 @@ static NSUInteger kNumberOfPages = 6;
 
 - (void)reloadData {
 
-	self.date = [NSDate dateWithTimeIntervalSinceReferenceDate:floor([[NSDate date] timeIntervalSinceReferenceDate] / 86400.0) * 86400.0];
+	double dt = 66.184;
+	NSDate *localDate = [NSDate dateWithTimeIntervalSinceReferenceDate:floor(([[NSDate date] timeIntervalSinceReferenceDate] + 43200.0 - dt) / 86400.0) * 86400.0];
 	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
 	[dateFormatter setDateFormat:@"yyyy-MM-dd"];
-	NSString *today = [dateFormatter stringFromDate:date];
-
-	self.data = [[NSMutableDictionary alloc] init];
+	NSString *dateString = [dateFormatter stringFromDate:localDate];
+	NSMutableDictionary *localData = [NSMutableDictionary dictionary];
 	NSString *dataPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"sqlite"];
 	sqlite3 *database;
 	if (sqlite3_open([dataPath UTF8String], &database) == SQLITE_OK) {
-		NSString *sql = [NSString stringWithFormat:@"SELECT object, x, y, z, vx, vy, vz FROM data WHERE date = '%@'", today];
+		NSString *sql = [NSString stringWithFormat:@"SELECT object, x, y, z, vx, vy, vz FROM data WHERE date = '%@'", dateString];
 		sqlite3_stmt *statement;
 		if (sqlite3_prepare_v2(database, [sql UTF8String], -1, &statement, NULL) == SQLITE_OK) {
 			double vectors[7];
@@ -181,12 +181,14 @@ static NSUInteger kNumberOfPages = 6;
 				vectors[4] = sqlite3_column_double(statement, 4);
 				vectors[5] = sqlite3_column_double(statement, 5);
 				vectors[6] = sqlite3_column_double(statement, 6);
-				[data setObject:[NSMutableData dataWithBytes:vectors length:sizeof(vectors)] forKey:key];
+				[localData setObject:[NSMutableData dataWithBytes:vectors length:sizeof(vectors)] forKey:key];
 			}
 		}
 		sqlite3_finalize(statement);
 	}
 	sqlite3_close(database);
+	self.date = [localDate dateByAddingTimeInterval:dt];
+	self.data = localData;
 }
 
 - (void)dealloc {

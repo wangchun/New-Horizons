@@ -35,7 +35,7 @@
 
 	[super viewWillAppear:animated];
 
-	timer = [NSTimer scheduledTimerWithTimeInterval:0.100 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+	timer = [NSTimer scheduledTimerWithTimeInterval:0.050 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
 	[[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 	[self timerFired:timer];
 }

@@ -129,8 +129,9 @@
 								<nil key="IBUIHighlightedColor"/>
 								<object class="NSColor" key="IBUIShadowColor">
 									<int key="NSColorSpace">3</int>
-									<bytes key="NSWhite">MCAwLjUAA</bytes>
+									<bytes key="NSWhite">MCAwLjYwMDAwMDAyMzgAA</bytes>
 								</object>
+								<string key="IBUIShadowOffset">{2, 2}</string>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">10</float>
 								<int key="IBUITextAlignment">1</int>

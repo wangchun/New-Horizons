@@ -26,11 +26,11 @@
 	[window addSubview:mainViewController.view];
 
 	if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-		backgroundImageName = @"Default.png";
+		backgroundImageName = @"NH.png";
 	} else {
-		backgroundImageName = @"Default~ipad.png";
+		backgroundImageName = @"NH~ipad.png";
 	}
-	self.backgroundImageView.image = [UIImage imageNamed:backgroundImageName];
+	backgroundImageView.image = [UIImage imageNamed:backgroundImageName];
 
 	for (PageViewController *pageViewController in mainViewController.viewControllers) {
 		if ([pageViewController isKindOfClass:[PageViewController class]]) {
@@ -42,6 +42,8 @@
 		}
 	}
 	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDelegate:self];
+	[UIView setAnimationDidStopSelector:@selector(animationDidStop:finished:context:)];
 	[UIView setAnimationDuration:0.5];
 	for (PageViewController *pageViewController in mainViewController.viewControllers) {
 		if ([pageViewController isKindOfClass:[PageViewController class]]) {
@@ -52,7 +54,6 @@
 			}
 		}
 	}
-	self.backgroundImageView.alpha = 0.0;
 	[UIView commitAnimations];
 
 	return YES;
@@ -61,6 +62,11 @@
 - (void)applicationSignificantTimeChange:(UIApplication *)application {
 
 	[self reloadData];
+}
+
+- (void)animationDidStop:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context {
+
+	backgroundImageView.image = nil;
 }
 
 - (void)loadSettings {
@@ -222,6 +228,7 @@
 - (void)dealloc {
 
 	[window release];
+	[backgroundImageView release];
 	[mainViewController release];
 
 	[bodies release];

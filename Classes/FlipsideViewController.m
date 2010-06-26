@@ -40,6 +40,11 @@
 	}
 }
 
+- (void)viewDidUnload {
+
+	self.metricSegmentedControl = nil;
+}
+
 - (IBAction)done {
 
 	[self.delegate flipsideViewControllerDidFinish:self];

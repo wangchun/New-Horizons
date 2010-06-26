@@ -40,6 +40,13 @@
 	[self loadScrollViewWithPage:1];
 }
 
+- (void)viewDidUnload {
+
+	self.scrollView = nil;
+	self.pageControl = nil;
+	self.viewControllers = nil;
+}
+
 - (void)viewWillAppear:(BOOL)animated {
 
 	[super viewWillAppear:animated];

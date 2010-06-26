@@ -9,6 +9,15 @@
 @synthesize pageControl;
 @synthesize viewControllers;
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+		return interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown;
+	} else {
+		return NO;
+	}
+}
+
 - (void)viewDidLoad {
 
 	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -135,11 +144,15 @@
 				double dy = vectors1[2] - vectors2[2];
 				double dz = vectors1[3] - vectors2[3];
 				double distance = sqrt(dx * dx + dy * dy + dz * dz);
+				NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+				[numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+				[numberFormatter setMaximumFractionDigits:0];
 				if ([[[[appDelegate.settings objectForKey:@"pages"] objectAtIndex:i] objectForKey:@"metric"] boolValue]) {
-					[controller.rangeLabel setText:[NSString stringWithFormat:@"%.f km", distance / 1000.0]];
+					[controller.rangeLabel setText:[NSString stringWithFormat:@"%@ km", [numberFormatter stringFromNumber:[NSNumber numberWithDouble:distance / 1000.0]]]];
 				} else {
-					[controller.rangeLabel setText:[NSString stringWithFormat:@"%.f mi", distance / 1609.344]];
+					[controller.rangeLabel setText:[NSString stringWithFormat:@"%@ mi", [numberFormatter stringFromNumber:[NSNumber numberWithDouble:distance / 1609.344]]]];
 				}
+				[numberFormatter release];
 			} else {
 				[controller.rangeLabel setText:@"No Data"];
 			}

@@ -42,6 +42,18 @@
 			<key>b</key>
 			<string>Pluto</string>
 		</dict>
+		<dict>
+			<key>a</key>
+			<string>Voyager 1</string>
+			<key>b</key>
+			<string>Sun</string>
+		</dict>
+		<dict>
+			<key>a</key>
+			<string>Voyager 2</string>
+			<key>b</key>
+			<string>Sun</string>
+		</dict>
 	</array>
 </dict>
 </plist>

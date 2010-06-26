@@ -1,12 +1,13 @@
 #import "AppDelegate.h"
 
-#include <sqlite3.h>
+#import "PageViewController.h"
 
-static NSUInteger kNumberOfPages = 6;
+#include <sqlite3.h>
 
 @implementation AppDelegate
 
 @synthesize window;
+@synthesize backgroundImageView;
 @synthesize mainViewController;
 
 @synthesize date;
@@ -24,6 +25,36 @@ static NSUInteger kNumberOfPages = 6;
 
 	[window addSubview:mainViewController.view];
 
+	if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+		backgroundImageName = @"Default.png";
+	} else {
+		backgroundImageName = @"Default~ipad.png";
+	}
+	self.backgroundImageView.image = [UIImage imageNamed:backgroundImageName];
+
+	for (PageViewController *pageViewController in mainViewController.viewControllers) {
+		if ([pageViewController isKindOfClass:[PageViewController class]]) {
+			if ([pageViewController.backgroundImageName isEqualToString:backgroundImageName]) {
+				pageViewController.contentView.alpha = 0.0;
+			} else {
+				pageViewController.view.alpha = 0.0;
+			}
+		}
+	}
+	[UIView beginAnimations:nil context:NULL];
+	[UIView setAnimationDuration:0.5];
+	for (PageViewController *pageViewController in mainViewController.viewControllers) {
+		if ([pageViewController isKindOfClass:[PageViewController class]]) {
+			if ([pageViewController.backgroundImageName isEqualToString:backgroundImageName]) {
+				pageViewController.contentView.alpha = 1.0;
+			} else {
+				pageViewController.view.alpha = 1.0;
+			}
+		}
+	}
+	self.backgroundImageView.alpha = 0.0;
+	[UIView commitAnimations];
+
 	return YES;
 }
 
@@ -35,9 +66,9 @@ static NSUInteger kNumberOfPages = 6;
 - (void)loadSettings {
 
 	NSString *path = [[self applicationDocumentsDirectory] stringByAppendingPathComponent:@"Settings.plist"];
+	NSString *defaultPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:path]) {
-		NSString *defaultPath = [[NSBundle mainBundle] pathForResource:@"Settings" ofType:@"plist"];
 		if (defaultPath) {
 			NSError *error = nil;
 			if (![fileManager copyItemAtPath:defaultPath toPath:path error:&error]) {
@@ -48,15 +79,12 @@ static NSUInteger kNumberOfPages = 6;
 	}
 	NSDictionary *loadedSettings = [NSDictionary dictionaryWithContentsOfFile:path];
 	NSMutableDictionary *localSettings = [NSMutableDictionary dictionary];
-	NSMutableArray *localPages = [NSMutableArray array];
-	for (unsigned i = 0; i < kNumberOfPages; ++i) {
-		[localPages addObject:[NSMutableDictionary dictionaryWithObjectsAndKeys:@"New Horizons", @"a", @"Pluto", @"b", [NSNumber numberWithBool:YES], @"metric", nil]];
-	}
 	[localSettings setObject:[NSNumber numberWithInt:1] forKey:@"version"];
+	NSMutableArray *localPages = [[[[NSDictionary dictionaryWithContentsOfFile:defaultPath] objectForKey:@"pages"] mutableCopy] autorelease];
 	if ([[loadedSettings objectForKey:@"version"] isEqualToNumber:[NSNumber numberWithInt:1]]) {
 		NSArray *loadedPages = [loadedSettings objectForKey:@"pages"];
 		if ([loadedPages isKindOfClass:[NSArray class]]) {
-			for (unsigned i = 0; i < [localPages count]; ++i) {
+			for (unsigned i = 0; i < [localPages count] && i < [loadedPages count]; ++i) {
 				NSDictionary *loadedPage = [loadedPages objectAtIndex:i];
 				if ([loadedPage isKindOfClass:[NSDictionary class]]) {
 					NSMutableDictionary *localPage = [NSMutableDictionary dictionary];

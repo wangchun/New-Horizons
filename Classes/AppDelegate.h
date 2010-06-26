@@ -3,7 +3,9 @@
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
 
 	UIWindow *window;
+	UIImageView *backgroundImageView;
 	MainViewController *mainViewController;
+	NSString *backgroundImageName;
 
 	NSDictionary *bodies;
 	NSMutableDictionary *settings;
@@ -12,6 +14,7 @@
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic, retain) IBOutlet MainViewController *mainViewController;
 
 @property (nonatomic, retain) NSDictionary *bodies;

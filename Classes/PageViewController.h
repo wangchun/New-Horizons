@@ -2,6 +2,7 @@
 
 @interface PageViewController : UIViewController <FlipsideViewControllerDelegate, UIActionSheetDelegate> {
 
+	UIImageView *backgroundImageView;
 	UILabel *dateLabel;
 	UILabel *rangeLabel;
 	UIButton *aButton;
@@ -12,6 +13,7 @@
 	int pageNumber;
 }
 
+@property (nonatomic, retain) IBOutlet UIImageView *backgroundImageView;
 @property (nonatomic, retain) IBOutlet UILabel *dateLabel;
 @property (nonatomic, retain) IBOutlet UILabel *rangeLabel;
 @property (nonatomic, retain) IBOutlet UIButton *aButton;

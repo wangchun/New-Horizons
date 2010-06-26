@@ -4,6 +4,7 @@
 
 @implementation PageViewController
 
+@synthesize backgroundImageView;
 @synthesize dateLabel;
 @synthesize rangeLabel;
 @synthesize aButton;
@@ -23,6 +24,7 @@
 
 	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
 
+	backgroundImageView.image = [UIImage imageNamed:@"Default.png"];
 	[aButton setTitle:[[[appDelegate.settings objectForKey:@"pages"] objectAtIndex:pageNumber] objectForKey:@"a"] forState:UIControlStateNormal];
 	[bButton setTitle:[[[appDelegate.settings objectForKey:@"pages"] objectAtIndex:pageNumber] objectForKey:@"b"] forState:UIControlStateNormal];
 	self.aActionSheet = [[[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"New Horizons", @"Sun", @"Mercury", @"Venus", @"Earth", @"Moon", @"Mars", @"Jupiter", @"Saturn", @"Uranus", @"Neptune", @"Pluto", @"Charon", nil] autorelease];
@@ -93,6 +95,7 @@
 
 - (void)dealloc {
 
+	[backgroundImageView release];
 	[dateLabel release];
 	[rangeLabel release];
 	[aButton release];

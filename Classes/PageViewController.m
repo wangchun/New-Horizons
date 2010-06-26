@@ -16,7 +16,7 @@
 
 - (id)initWithPageNumber:(int)page {
 
-	if (self = [super initWithNibName:@"PageView" bundle:nil]) {
+	if (self = [super initWithNibName:UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad ? @"PageView" : @"PageView~ipad" bundle:nil]) {
 		pageNumber = page;
 	}
 	return self;
@@ -24,10 +24,10 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-		return interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown;
-	} else {
+	if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
 		return NO;
+	} else {
+		return interfaceOrientation == UIInterfaceOrientationPortrait || interfaceOrientation == UIInterfaceOrientationPortraitUpsideDown;
 	}
 }
 

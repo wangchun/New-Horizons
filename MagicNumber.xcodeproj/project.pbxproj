@@ -15,6 +15,7 @@
 		6203C75611BAE81C00941AE3 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6203C75511BAE81C00941AE3 /* PageViewController.m */; };
 		6203C78211BAE9C400941AE3 /* PageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6203C78111BAE9C400941AE3 /* PageView.xib */; };
 		6203C79B11BAEB2B00941AE3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6203C79A11BAEB2B00941AE3 /* MainWindow.xib */; };
+		6229A7C311D6BEE100263353 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6229A7C211D6BEE100263353 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		623CA65D11D66A800038B3D3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 623CA65A11D66A800038B3D3 /* Default@2x.png */; };
 		623CA65E11D66A800038B3D3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 623CA65B11D66A800038B3D3 /* Icon@2x.png */; };
 		623CA65F11D66A800038B3D3 /* Icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 623CA65C11D66A800038B3D3 /* Icon~ipad.png */; };
@@ -51,6 +52,7 @@
 		6203C75511BAE81C00941AE3 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		6203C78111BAE9C400941AE3 /* PageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageView.xib; sourceTree = "<group>"; };
 		6203C79A11BAEB2B00941AE3 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		6229A7C211D6BEE100263353 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		623CA65A11D66A800038B3D3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		623CA65B11D66A800038B3D3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		623CA65C11D66A800038B3D3 /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				629C952D11A5BA8900B5AFF6 /* libsqlite3.dylib in Frameworks */,
+				6229A7C311D6BEE100263353 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +175,7 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				6229A7C211D6BEE100263353 /* iAd.framework */,
 				629C952C11A5BA8900B5AFF6 /* libsqlite3.dylib */,
 			);
 			name = Frameworks;

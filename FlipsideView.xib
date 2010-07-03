@@ -104,7 +104,7 @@
 					<object class="IBUIButton" id="332501598">
 						<reference key="NSNextResponder" ref="249263867"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{20, 358}, {280, 52}}</string>
+						<string key="NSFrame">{{20, 401}, {280, 19}}</string>
 						<reference key="NSSuperview" ref="249263867"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -128,17 +128,6 @@
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MC41AA</bytes>
 						</object>
-					</object>
-					<object class="IBUIView" id="907705891">
-						<reference key="NSNextResponder" ref="249263867"/>
-						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{0, 410}, {320, 50}}</string>
-						<reference key="NSSuperview" ref="249263867"/>
-						<object class="NSColor" key="IBUIBackgroundColor">
-							<int key="NSColorSpace">3</int>
-							<bytes key="NSWhite">MCAwAA</bytes>
-						</object>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 460}</string>
@@ -210,14 +199,6 @@
 					</object>
 					<int key="connectionID">55</int>
 				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">adView</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="907705891"/>
-					</object>
-					<int key="connectionID">57</int>
-				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -247,7 +228,6 @@
 							<reference ref="871675769"/>
 							<reference ref="762675832"/>
 							<reference ref="332501598"/>
-							<reference ref="907705891"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -284,11 +264,6 @@
 						<reference key="object" ref="332501598"/>
 						<reference key="parent" ref="249263867"/>
 					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">56</int>
-						<reference key="object" ref="907705891"/>
-						<reference key="parent" ref="249263867"/>
-					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -304,14 +279,12 @@
 					<string>44.IBPluginDependency</string>
 					<string>46.IBPluginDependency</string>
 					<string>51.IBPluginDependency</string>
-					<string>56.IBPluginDependency</string>
 				</object>
 				<object class="NSMutableArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>FlipsideViewController</string>
 					<string>UIResponder</string>
-					<string>{{376, 335}, {320, 480}}</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<string>{{376, 276}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -387,14 +360,12 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>adView</string>
 							<string>delegate</string>
 							<string>linkButton</string>
 							<string>metricSegmentedControl</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>UIView</string>
 							<string>id</string>
 							<string>UIButton</string>
 							<string>UISegmentedControl</string>
@@ -404,17 +375,12 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>adView</string>
 							<string>delegate</string>
 							<string>linkButton</string>
 							<string>metricSegmentedControl</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">adView</string>
-								<string key="candidateClassName">UIView</string>
-							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">delegate</string>
 								<string key="candidateClassName">id</string>

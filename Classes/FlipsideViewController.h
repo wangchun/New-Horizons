@@ -1,21 +1,22 @@
 @protocol FlipsideViewControllerDelegate;
 
-@interface FlipsideViewController : UIViewController {
+@interface FlipsideViewController : UIViewController <ADBannerViewDelegate> {
 
 	id <FlipsideViewControllerDelegate> delegate;
 
 	UISegmentedControl *metricSegmentedControl;
 	UIButton *linkButton;
-	UIView *adView;
+	ADBannerView *bannerView;
 
 	int pageNumber;
+	BOOL animating;
 }
 
 @property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
 
 @property (nonatomic, retain) IBOutlet UISegmentedControl *metricSegmentedControl;
 @property (nonatomic, retain) IBOutlet UIButton *linkButton;
-@property (nonatomic, retain) IBOutlet UIView *adView;
+@property (nonatomic, retain) ADBannerView *bannerView;
 
 - (IBAction)done;
 - (IBAction)metric;

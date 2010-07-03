@@ -8,12 +8,13 @@
 
 @synthesize metricSegmentedControl;
 @synthesize linkButton;
-@synthesize adView;
+@synthesize bannerView;
 
 - (id)initWithPageNumber:(int)page {
 
 	if (self = [super initWithNibName:@"FlipsideView" bundle:nil]) {
 		pageNumber = page;
+		animating = NO;
 	}
 	return self;
 }
@@ -43,13 +44,11 @@
 
 	Class bannerViewClass = NSClassFromString(@"ADBannerView");
 	if (bannerViewClass != nil) {
-		adView.backgroundColor = [UIColor whiteColor];
-		ADBannerView *bannerView = [[ADBannerView alloc] initWithFrame:CGRectZero];
+		bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height, 320.0, 50.0)];
+		bannerView.delegate = self;
 		bannerView.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifier320x50];
 		bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifier320x50;
-		[adView addSubview:bannerView];
-	} else {
-		adView.backgroundColor = [UIColor clearColor];
+		[self.view addSubview:bannerView];
 	}
 }
 
@@ -57,10 +56,16 @@
 
 	self.metricSegmentedControl = nil;
 	self.linkButton = nil;
-	self.adView = nil;
+	self.bannerView = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+
+	[super viewWillAppear:animated];
+
+	if (animated) {
+		animating = YES;
+	}
 
 	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
 
@@ -74,6 +79,82 @@
 		[linkButton setTitle:@"http://voyager.jpl.nasa.gov/" forState:UIControlStateNormal];
 	} else {
 		[linkButton setTitle:@"http://pluto.jhuapl.edu/" forState:UIControlStateNormal];
+	}
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
+	[super viewDidAppear:animated];
+
+	if (animated) {
+		animating = NO;
+	}
+
+	Class bannerViewClass = NSClassFromString(@"ADBannerView");
+	if (bannerViewClass != nil) {
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.5];
+		if (bannerView.bannerLoaded) {
+			bannerView.frame = CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height - 50.0, 320.0, 50.0);
+			CGRect frame = linkButton.frame;
+			frame.origin.y = bannerView.frame.origin.y - frame.size.height - 20;
+			linkButton.frame = frame;
+		} else {
+			bannerView.frame = CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height, 320.0, 50.0);
+			CGRect frame = linkButton.frame;
+			frame.origin.y = bannerView.frame.origin.y - frame.size.height - 40;
+			linkButton.frame = frame;
+		}
+		[UIView commitAnimations];
+	}
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+
+	[super viewWillDisappear:animated];
+
+	if (animated) {
+		animating = YES;
+	}
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+
+	[super viewDidDisappear:animated];
+
+	if (animated) {
+		animating = NO;
+	}
+
+	bannerView.frame = CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height, 320.0, 50.0);
+	CGRect frame = linkButton.frame;
+	frame.origin.y = bannerView.frame.origin.y - frame.size.height - 40;
+	linkButton.frame = frame;
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+
+	if (!animating) {
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.5];
+		bannerView.frame = CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height - 50.0, 320.0, 50.0);
+		CGRect frame = linkButton.frame;
+		frame.origin.y = bannerView.frame.origin.y - frame.size.height - 20;
+		linkButton.frame = frame;
+		[UIView commitAnimations];
+	}
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+
+	if (!animating) {
+		[UIView beginAnimations:nil context:NULL];
+		[UIView setAnimationDuration:0.5];
+		bannerView.frame = CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height, 320.0, 50.0);
+		CGRect frame = linkButton.frame;
+		frame.origin.y = bannerView.frame.origin.y - frame.size.height - 40;
+		linkButton.frame = frame;
+		[UIView commitAnimations];
 	}
 }
 
@@ -117,7 +198,7 @@
 
 	[metricSegmentedControl release];
 	[linkButton release];
-	[adView release];
+	[bannerView release];
 
 	[super dealloc];
 }

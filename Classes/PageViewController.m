@@ -58,7 +58,7 @@
 		contentViewController.tableView.dataSource = self;
 		self.aPopoverController = [[UIPopoverController alloc] initWithContentViewController:contentViewController];
 		aPopoverController.delegate = self;
-		aPopoverController.popoverContentSize = CGSizeMake(240.0, 600.0);
+		aPopoverController.popoverContentSize = CGSizeMake(240.0, 660.0);
 		self.aTableView = contentViewController.tableView;
 		[contentViewController release];
 		contentViewController = [[UITableViewController alloc] init];
@@ -66,7 +66,7 @@
 		contentViewController.tableView.dataSource = self;
 		self.bPopoverController = [[UIPopoverController alloc] initWithContentViewController:contentViewController];
 		bPopoverController.delegate = self;
-		bPopoverController.popoverContentSize = CGSizeMake(240.0, 600.0);
+		bPopoverController.popoverContentSize = CGSizeMake(240.0, 660.0);
 		self.bTableView = contentViewController.tableView;
 		[contentViewController release];
 	}

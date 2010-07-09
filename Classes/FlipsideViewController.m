@@ -44,11 +44,9 @@
 
 	Class bannerViewClass = NSClassFromString(@"ADBannerView");
 	if (bannerViewClass != nil) {
-		bannerView = [[ADBannerView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height, 320.0, 50.0)];
-		bannerView.delegate = self;
+		self.bannerView = [[[ADBannerView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height, 320.0, 50.0)] autorelease];
 		bannerView.requiredContentSizeIdentifiers = [NSSet setWithObject:ADBannerContentSizeIdentifier320x50];
 		bannerView.currentContentSizeIdentifier = ADBannerContentSizeIdentifier320x50;
-		[self.view addSubview:bannerView];
 	}
 }
 
@@ -65,6 +63,11 @@
 
 	if (animated) {
 		animating = YES;
+	}
+
+	Class bannerViewClass = NSClassFromString(@"ADBannerView");
+	if (bannerViewClass != nil) {
+		bannerView.delegate = self;
 	}
 
 	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
@@ -92,6 +95,7 @@
 
 	Class bannerViewClass = NSClassFromString(@"ADBannerView");
 	if (bannerViewClass != nil) {
+		[self.view addSubview:bannerView];
 		[UIView beginAnimations:nil context:NULL];
 		[UIView setAnimationDuration:0.5];
 		if (bannerView.bannerLoaded) {
@@ -124,6 +128,12 @@
 
 	if (animated) {
 		animating = NO;
+	}
+
+	Class bannerViewClass = NSClassFromString(@"ADBannerView");
+	if (bannerViewClass != nil) {
+		[bannerView removeFromSuperview];
+		bannerView.delegate = nil;
 	}
 
 	bannerView.frame = CGRectMake((self.view.bounds.size.width - 320.0) / 2.0, self.view.bounds.size.height, 320.0, 50.0);

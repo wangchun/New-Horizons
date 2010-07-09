@@ -98,27 +98,27 @@
 	[bButton setTitle:[NSString stringWithFormat:@" %@ ", b] forState:UIControlStateNormal];
 	if ([a isEqualToString:@"New Horizons"] || [b isEqualToString:@"New Horizons"]) {
 		if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-			self.backgroundImageName = @"NH.png";
+			self.backgroundImageName = @"Default.png";
 		} else {
-			self.backgroundImageName = @"NH~ipad.png";
+			self.backgroundImageName = @"Default~ipad.png";
 		}
 	} else if ([a isEqualToString:@"Voyager 1"] || [b isEqualToString:@"Voyager 1"]) {
 		if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-			self.backgroundImageName = @"Voyager.png";
+			self.backgroundImageName = @"Voyager.jpg";
 		} else {
-			self.backgroundImageName = @"Voyager~ipad.png";
+			self.backgroundImageName = @"Voyager~ipad.jpg";
 		}
 	} else if ([a isEqualToString:@"Voyager 2"] || [b isEqualToString:@"Voyager 2"]) {
 		if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-			self.backgroundImageName = @"Voyager.png";
+			self.backgroundImageName = @"Voyager.jpg";
 		} else {
-			self.backgroundImageName = @"Voyager~ipad.png";
+			self.backgroundImageName = @"Voyager~ipad.jpg";
 		}
 	} else {
 		if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-			self.backgroundImageName = @"NH.png";
+			self.backgroundImageName = @"Default.png";
 		} else {
-			self.backgroundImageName = @"NH~ipad.png";
+			self.backgroundImageName = @"Default~ipad.png";
 		}
 	}
 	backgroundImageView.image = [UIImage imageNamed:backgroundImageName];

@@ -32,6 +32,8 @@
 	<true/>
 	<key>NSMainNibFile</key>
 	<string>MainWindow</string>
+	<key>UIApplicationExitsOnSuspend</key>
+	<true/>
 	<key>UILaunchImageFile</key>
 	<string>Default.png</string>
 	<key>UILaunchImageFile~ipad</key>

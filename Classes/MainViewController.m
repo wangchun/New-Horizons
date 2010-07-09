@@ -23,6 +23,7 @@
 	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
 
 	NSUInteger numberOfPages = [[appDelegate.settings objectForKey:@"pages"] count];
+	int page = [[appDelegate.settings objectForKey:@"page"] intValue];
 
 	NSMutableArray *controllers = [NSMutableArray arrayWithCapacity:numberOfPages];
 	for (unsigned i = 0; i < numberOfPages; ++i) {
@@ -34,10 +35,16 @@
 	scrollView.scrollsToTop = NO;
 
 	pageControl.numberOfPages = numberOfPages;
-	pageControl.currentPage = 0;
+	pageControl.currentPage = page;
 
-	[self loadScrollViewWithPage:0];
-	[self loadScrollViewWithPage:1];
+	[self loadScrollViewWithPage:page];
+	[self loadScrollViewWithPage:page - 1];
+	[self loadScrollViewWithPage:page + 1];
+
+	CGRect frame = scrollView.frame;
+	frame.origin.x = frame.size.width * page;
+	frame.origin.y = 0;
+	[scrollView scrollRectToVisible:frame animated:NO];
 }
 
 - (void)viewDidUnload {
@@ -66,6 +73,8 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
 
+	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
 	if (pageControlUsed) {
 		return;
 	}
@@ -76,6 +85,11 @@
 	[self loadScrollViewWithPage:page];
 	[self loadScrollViewWithPage:page - 1];
 	[self loadScrollViewWithPage:page + 1];
+
+	if (page != [[appDelegate.settings objectForKey:@"page"] intValue]) {
+		[appDelegate.settings setObject:[NSNumber numberWithInt:page] forKey:@"page"];
+		[appDelegate saveSettings];
+	}
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -90,11 +104,18 @@
 
 - (IBAction)changePage:(id)sender {
 
+	AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+
 	int page = pageControl.currentPage;
 
 	[self loadScrollViewWithPage:page];
 	[self loadScrollViewWithPage:page - 1];
 	[self loadScrollViewWithPage:page + 1];
+
+	if (page != [[appDelegate.settings objectForKey:@"page"] intValue]) {
+		[appDelegate.settings setObject:[NSNumber numberWithInt:page] forKey:@"page"];
+		[appDelegate saveSettings];
+	}
 
 	CGRect frame = scrollView.frame;
 	frame.origin.x = frame.size.width * page;

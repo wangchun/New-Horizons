@@ -55,5 +55,7 @@
 			<string>Sun</string>
 		</dict>
 	</array>
+	<key>page</key>
+	<integer>0</integer>
 </dict>
 </plist>

@@ -26,9 +26,9 @@
 	[window addSubview:mainViewController.view];
 
 	if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
-		backgroundImageName = @"NH.png";
+		backgroundImageName = @"Default.png";
 	} else {
-		backgroundImageName = @"NH~ipad.png";
+		backgroundImageName = @"Default~ipad.png";
 	}
 	backgroundImageView.image = [UIImage imageNamed:backgroundImageName];
 
@@ -84,9 +84,11 @@
 		}
 	}
 	NSDictionary *loadedSettings = [NSDictionary dictionaryWithContentsOfFile:path];
+	NSDictionary *defaultSettings = [NSDictionary dictionaryWithContentsOfFile:defaultPath];
 	NSMutableDictionary *localSettings = [NSMutableDictionary dictionary];
 	[localSettings setObject:[NSNumber numberWithInt:1] forKey:@"version"];
-	NSMutableArray *localPages = [[[[NSDictionary dictionaryWithContentsOfFile:defaultPath] objectForKey:@"pages"] mutableCopy] autorelease];
+	NSMutableArray *localPages = [[[defaultSettings objectForKey:@"pages"] mutableCopy] autorelease];
+	NSNumber *localPage = [defaultSettings objectForKey:@"page"];
 	if ([[loadedSettings objectForKey:@"version"] isEqualToNumber:[NSNumber numberWithInt:1]]) {
 		NSArray *loadedPages = [loadedSettings objectForKey:@"pages"];
 		if ([loadedPages isKindOfClass:[NSArray class]]) {
@@ -122,8 +124,13 @@
 				}
 			}
 		}
+		NSNumber *loadedPage = [loadedSettings objectForKey:@"page"];
+		if ([loadedPage isKindOfClass:[NSNumber class]]) {
+			localPage = [NSNumber numberWithInt:[loadedPage intValue] >= 0 && [loadedPage intValue] < [localPages count] ? [loadedPage intValue] : 0];
+		}
 	}
 	[localSettings setObject:localPages forKey:@"pages"];
+	[localSettings setObject:localPage forKey:@"page"];
 	self.settings = localSettings;
 }
 

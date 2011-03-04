@@ -80,6 +80,8 @@
 		[linkButton setTitle:@"http://voyager.jpl.nasa.gov/" forState:UIControlStateNormal];
 	} else if ([a isEqualToString:@"Voyager 2"] || [b isEqualToString:@"Voyager 2"]) {
 		[linkButton setTitle:@"http://voyager.jpl.nasa.gov/" forState:UIControlStateNormal];
+	} else if ([a isEqualToString:@"MESSENGER"] || [b isEqualToString:@"MESSENGER"]) {
+		[linkButton setTitle:@"http://messenger.jhuapl.edu/" forState:UIControlStateNormal];
 	} else {
 		[linkButton setTitle:@"http://pluto.jhuapl.edu/" forState:UIControlStateNormal];
 	}

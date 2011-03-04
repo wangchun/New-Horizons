@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		6203C75611BAE81C00941AE3 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6203C75511BAE81C00941AE3 /* PageViewController.m */; };
 		6203C78211BAE9C400941AE3 /* PageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6203C78111BAE9C400941AE3 /* PageView.xib */; };
 		6203C79B11BAEB2B00941AE3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6203C79A11BAEB2B00941AE3 /* MainWindow.xib */; };
+		620B6ECE1320E580007A16D0 /* MESSENGER.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 620B6ECC1320E580007A16D0 /* MESSENGER.jpg */; };
+		620B6ECF1320E580007A16D0 /* MESSENGER~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 620B6ECD1320E580007A16D0 /* MESSENGER~ipad.jpg */; };
 		6229A7C311D6BEE100263353 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6229A7C211D6BEE100263353 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		623CA65D11D66A800038B3D3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 623CA65A11D66A800038B3D3 /* Default@2x.png */; };
 		623CA65E11D66A800038B3D3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 623CA65B11D66A800038B3D3 /* Icon@2x.png */; };
@@ -48,6 +50,8 @@
 		6203C75511BAE81C00941AE3 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		6203C78111BAE9C400941AE3 /* PageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageView.xib; sourceTree = "<group>"; };
 		6203C79A11BAEB2B00941AE3 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		620B6ECC1320E580007A16D0 /* MESSENGER.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MESSENGER.jpg; sourceTree = "<group>"; };
+		620B6ECD1320E580007A16D0 /* MESSENGER~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MESSENGER~ipad.jpg"; sourceTree = "<group>"; };
 		6229A7C211D6BEE100263353 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		623CA65A11D66A800038B3D3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		623CA65B11D66A800038B3D3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -100,7 +104,8 @@
 				629C951011A5B8E900B5AFF6 /* FlipsideViewController.h */,
 				629C951111A5B8E900B5AFF6 /* FlipsideViewController.m */,
 			);
-			path = Classes;
+			name = Classes;
+			path = MagicNumber;
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -111,7 +116,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+		29B97314FDCFA39411CA2CEA = {
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -120,7 +125,6 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
-			name = CustomTemplate;
 			sourceTree = "<group>";
 		};
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
@@ -150,6 +154,8 @@
 				629C951B11A5B90F00B5AFF6 /* FlipsideView.xib */,
 				62B9BEFD11E7A7E80033B160 /* Voyager.jpg */,
 				62B9BEFE11E7A7E80033B160 /* Voyager~ipad.jpg */,
+				620B6ECC1320E580007A16D0 /* MESSENGER.jpg */,
+				620B6ECD1320E580007A16D0 /* MESSENGER~ipad.jpg */,
 				627B632A11A45BAF00C5A594 /* Bodies.plist */,
 				627B632B11A45BAF00C5A594 /* Settings.plist */,
 				629C951A11A5B90F00B5AFF6 /* Data.sqlite */,
@@ -194,13 +200,15 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-				ORGANIZATIONNAME = "Wang Chun";
-			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MagicNumber" */;
-			compatibilityVersion = "Xcode 3.1";
-			hasScannedForEncodings = 1;
-			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA;
+			productRefGroup = 19C28FACFE9D520D11CA2CBB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -230,6 +238,8 @@
 				627590AE11D6997000ED0CF2 /* PageView~ipad.xib in Resources */,
 				62B9BEFF11E7A7E80033B160 /* Voyager.jpg in Resources */,
 				62B9BF0011E7A7E80033B160 /* Voyager~ipad.jpg in Resources */,
+				620B6ECE1320E580007A16D0 /* MESSENGER.jpg in Resources */,
+				620B6ECF1320E580007A16D0 /* MESSENGER~ipad.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,11 +267,12 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = MagicNumber;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
@@ -273,8 +284,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
-				PRODUCT_NAME = MagicNumber;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -283,12 +296,14 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PREBINDING = NO;
-				SDKROOT = iphoneos4.0;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -298,15 +313,15 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				GCC_C_LANGUAGE_STANDARD = c99;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Chun Wang";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				SDKROOT = iphoneos4.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9BC51D13-3F98-437D-8F63-BF98F38215A7";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

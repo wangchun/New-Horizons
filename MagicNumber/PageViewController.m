@@ -22,7 +22,7 @@
 
 	if (self = [super initWithNibName:UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad ? @"PageView" : @"PageView~ipad" bundle:nil]) {
 		pageNumber = page;
-		bodies = [[NSArray alloc] initWithObjects:@"New Horizons", @"Voyager 1", @"Voyager 2", @"Sun", @"Mercury", @"Venus", @"Earth", @"Moon", @"Mars", @"Jupiter", @"Saturn", @"Uranus", @"Neptune", @"Pluto", @"Charon", nil];
+		bodies = [[NSArray alloc] initWithObjects:@"New Horizons", @"Voyager 1", @"Voyager 2", @"MESSENGER", @"Sun", @"Mercury", @"Venus", @"Earth", @"Moon", @"Mars", @"Jupiter", @"Saturn", @"Uranus", @"Neptune", @"Pluto", @"Charon", nil];
 	}
 	return self;
 }
@@ -113,6 +113,12 @@
 			self.backgroundImageName = @"Voyager.jpg";
 		} else {
 			self.backgroundImageName = @"Voyager~ipad.jpg";
+		}
+	} else if ([a isEqualToString:@"MESSENGER"] || [b isEqualToString:@"MESSENGER"]) {
+		if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {
+			self.backgroundImageName = @"MESSENGER.jpg";
+		} else {
+			self.backgroundImageName = @"MESSENGER~ipad.jpg";
 		}
 	} else {
 		if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad) {

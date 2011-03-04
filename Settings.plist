@@ -8,6 +8,12 @@
 	<array>
 		<dict>
 			<key>a</key>
+			<string>MESSENGER</string>
+			<key>b</key>
+			<string>Mercury</string>
+		</dict>
+		<dict>
+			<key>a</key>
 			<string>New Horizons</string>
 			<key>b</key>
 			<string>Pluto</string>
@@ -29,12 +35,6 @@
 			<string>Earth</string>
 			<key>b</key>
 			<string>Pluto</string>
-		</dict>
-		<dict>
-			<key>a</key>
-			<string>Sun</string>
-			<key>b</key>
-			<string>Earth</string>
 		</dict>
 		<dict>
 			<key>a</key>

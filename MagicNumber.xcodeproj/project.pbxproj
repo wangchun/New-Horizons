@@ -15,8 +15,6 @@
 		6203C75611BAE81C00941AE3 /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6203C75511BAE81C00941AE3 /* PageViewController.m */; };
 		6203C78211BAE9C400941AE3 /* PageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6203C78111BAE9C400941AE3 /* PageView.xib */; };
 		6203C79B11BAEB2B00941AE3 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6203C79A11BAEB2B00941AE3 /* MainWindow.xib */; };
-		620B6ECE1320E580007A16D0 /* MESSENGER.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 620B6ECC1320E580007A16D0 /* MESSENGER.jpg */; };
-		620B6ECF1320E580007A16D0 /* MESSENGER~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 620B6ECD1320E580007A16D0 /* MESSENGER~ipad.jpg */; };
 		6229A7C311D6BEE100263353 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6229A7C211D6BEE100263353 /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		623CA65D11D66A800038B3D3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 623CA65A11D66A800038B3D3 /* Default@2x.png */; };
 		623CA65E11D66A800038B3D3 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 623CA65B11D66A800038B3D3 /* Icon@2x.png */; };
@@ -50,8 +48,6 @@
 		6203C75511BAE81C00941AE3 /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		6203C78111BAE9C400941AE3 /* PageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageView.xib; sourceTree = "<group>"; };
 		6203C79A11BAEB2B00941AE3 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
-		620B6ECC1320E580007A16D0 /* MESSENGER.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MESSENGER.jpg; sourceTree = "<group>"; };
-		620B6ECD1320E580007A16D0 /* MESSENGER~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "MESSENGER~ipad.jpg"; sourceTree = "<group>"; };
 		6229A7C211D6BEE100263353 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		623CA65A11D66A800038B3D3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		623CA65B11D66A800038B3D3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -154,8 +150,6 @@
 				629C951B11A5B90F00B5AFF6 /* FlipsideView.xib */,
 				62B9BEFD11E7A7E80033B160 /* Voyager.jpg */,
 				62B9BEFE11E7A7E80033B160 /* Voyager~ipad.jpg */,
-				620B6ECC1320E580007A16D0 /* MESSENGER.jpg */,
-				620B6ECD1320E580007A16D0 /* MESSENGER~ipad.jpg */,
 				627B632A11A45BAF00C5A594 /* Bodies.plist */,
 				627B632B11A45BAF00C5A594 /* Settings.plist */,
 				629C951A11A5B90F00B5AFF6 /* Data.sqlite */,
@@ -238,8 +232,6 @@
 				627590AE11D6997000ED0CF2 /* PageView~ipad.xib in Resources */,
 				62B9BEFF11E7A7E80033B160 /* Voyager.jpg in Resources */,
 				62B9BF0011E7A7E80033B160 /* Voyager~ipad.jpg in Resources */,
-				620B6ECE1320E580007A16D0 /* MESSENGER.jpg in Resources */,
-				620B6ECF1320E580007A16D0 /* MESSENGER~ipad.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

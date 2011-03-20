@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62F32C7A1336C59A000BC6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F32C791336C59A000BC6FD /* UIKit.framework */; };
+		62F32C7C1336C59A000BC6FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F32C7B1336C59A000BC6FD /* Foundation.framework */; };
+		62F32C7E1336C59A000BC6FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F32C7D1336C59A000BC6FD /* CoreGraphics.framework */; };
+		62F32C871336C59A000BC6FD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F32C861336C59A000BC6FD /* main.m */; };
+		62F32C8A1336C59A000BC6FD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F32C891336C59A000BC6FD /* AppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		62F32C751336C59A000BC6FD /* Magnum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magnum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62F32C791336C59A000BC6FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		62F32C7B1336C59A000BC6FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		62F32C7D1336C59A000BC6FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		62F32C811336C59A000BC6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62F32C851336C59A000BC6FD /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		62F32C861336C59A000BC6FD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62F32C881336C59A000BC6FD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		62F32C891336C59A000BC6FD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62F32C721336C59A000BC6FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62F32C7A1336C59A000BC6FD /* UIKit.framework in Frameworks */,
+				62F32C7C1336C59A000BC6FD /* Foundation.framework in Frameworks */,
+				62F32C7E1336C59A000BC6FD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62F32C6A1336C59A000BC6FD = {
+			isa = PBXGroup;
+			children = (
+				62F32C7F1336C59A000BC6FD /* Magnum */,
+				62F32C781336C59A000BC6FD /* Frameworks */,
+				62F32C761336C59A000BC6FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62F32C761336C59A000BC6FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62F32C751336C59A000BC6FD /* Magnum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62F32C781336C59A000BC6FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62F32C7D1336C59A000BC6FD /* CoreGraphics.framework */,
+				62F32C7B1336C59A000BC6FD /* Foundation.framework */,
+				62F32C791336C59A000BC6FD /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		62F32C7F1336C59A000BC6FD /* Magnum */ = {
+			isa = PBXGroup;
+			children = (
+				62F32C881336C59A000BC6FD /* AppDelegate.h */,
+				62F32C891336C59A000BC6FD /* AppDelegate.m */,
+				62F32C801336C59A000BC6FD /* Supporting Files */,
+			);
+			path = Magnum;
+			sourceTree = "<group>";
+		};
+		62F32C801336C59A000BC6FD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62F32C811336C59A000BC6FD /* Info.plist */,
+				62F32C851336C59A000BC6FD /* Prefix.pch */,
+				62F32C861336C59A000BC6FD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62F32C741336C59A000BC6FD /* Magnum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62F32C9B1336C59B000BC6FD /* Build configuration list for PBXNativeTarget "Magnum" */;
+			buildPhases = (
+				62F32C711336C59A000BC6FD /* Sources */,
+				62F32C721336C59A000BC6FD /* Frameworks */,
+				62F32C731336C59A000BC6FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Magnum;
+			productName = Magnum;
+			productReference = 62F32C751336C59A000BC6FD /* Magnum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62F32C6C1336C59A000BC6FD /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 62F32C6F1336C59A000BC6FD /* Build configuration list for PBXProject "Magnum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 62F32C6A1336C59A000BC6FD;
+			productRefGroup = 62F32C761336C59A000BC6FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62F32C741336C59A000BC6FD /* Magnum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62F32C731336C59A000BC6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62F32C711336C59A000BC6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62F32C871336C59A000BC6FD /* main.m in Sources */,
+				62F32C8A1336C59A000BC6FD /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		62F32C991336C59A000BC6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		62F32C9A1336C59A000BC6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		62F32C9C1336C59B000BC6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Magnum/Prefix.pch;
+				INFOPLIST_FILE = Magnum/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		62F32C9D1336C59B000BC6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Magnum/Prefix.pch;
+				INFOPLIST_FILE = Magnum/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62F32C6F1336C59A000BC6FD /* Build configuration list for PBXProject "Magnum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62F32C991336C59A000BC6FD /* Debug */,
+				62F32C9A1336C59A000BC6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62F32C9B1336C59B000BC6FD /* Build configuration list for PBXNativeTarget "Magnum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62F32C9C1336C59B000BC6FD /* Debug */,
+				62F32C9D1336C59B000BC6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62F32C6C1336C59A000BC6FD /* Project object */;
+}

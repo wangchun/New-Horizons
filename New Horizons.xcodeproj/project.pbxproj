@@ -26,7 +26,7 @@
 		62963F3F1336CE43001DEBC4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		62963F401336CE43001DEBC4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		62963F411336CE43001DEBC4 /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
-		62F32C751336C59A000BC6FD /* Magnum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magnum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62F32C751336C59A000BC6FD /* New Horizons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Horizons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F32C791336C59A000BC6FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		62F32C7B1336C59A000BC6FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		62F32C7D1336C59A000BC6FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -54,7 +54,7 @@
 		62F32C6A1336C59A000BC6FD = {
 			isa = PBXGroup;
 			children = (
-				62F32C7F1336C59A000BC6FD /* Magnum */,
+				62F32C7F1336C59A000BC6FD /* New Horizons */,
 				62F32C781336C59A000BC6FD /* Frameworks */,
 				62F32C761336C59A000BC6FD /* Products */,
 			);
@@ -63,7 +63,7 @@
 		62F32C761336C59A000BC6FD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				62F32C751336C59A000BC6FD /* Magnum.app */,
+				62F32C751336C59A000BC6FD /* New Horizons.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,7 +78,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		62F32C7F1336C59A000BC6FD /* Magnum */ = {
+		62F32C7F1336C59A000BC6FD /* New Horizons */ = {
 			isa = PBXGroup;
 			children = (
 				62F32C881336C59A000BC6FD /* AppDelegate.h */,
@@ -87,7 +87,7 @@
 				62F32C921336C59A000BC6FD /* iPad */,
 				62F32C801336C59A000BC6FD /* Supporting Files */,
 			);
-			path = Magnum;
+			path = "New Horizons";
 			sourceTree = "<group>";
 		};
 		62F32C801336C59A000BC6FD /* Supporting Files */ = {
@@ -123,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		62F32C741336C59A000BC6FD /* Magnum */ = {
+		62F32C741336C59A000BC6FD /* New Horizons */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 62F32C9B1336C59B000BC6FD /* Build configuration list for PBXNativeTarget "Magnum" */;
+			buildConfigurationList = 62F32C9B1336C59B000BC6FD /* Build configuration list for PBXNativeTarget "New Horizons" */;
 			buildPhases = (
 				62F32C711336C59A000BC6FD /* Sources */,
 				62F32C721336C59A000BC6FD /* Frameworks */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = Magnum;
-			productName = Magnum;
-			productReference = 62F32C751336C59A000BC6FD /* Magnum.app */;
+			name = "New Horizons";
+			productName = "New Horizons";
+			productReference = 62F32C751336C59A000BC6FD /* New Horizons.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +145,7 @@
 /* Begin PBXProject section */
 		62F32C6C1336C59A000BC6FD /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = 62F32C6F1336C59A000BC6FD /* Build configuration list for PBXProject "Magnum" */;
+			buildConfigurationList = 62F32C6F1336C59A000BC6FD /* Build configuration list for PBXProject "New Horizons" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -157,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				62F32C741336C59A000BC6FD /* Magnum */,
+				62F32C741336C59A000BC6FD /* New Horizons */,
 			);
 		};
 /* End PBXProject section */
@@ -231,8 +231,8 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Magnum/Prefix.pch;
-				INFOPLIST_FILE = Magnum/Info.plist;
+				GCC_PREFIX_HEADER = "New Horizons/Prefix.pch";
+				INFOPLIST_FILE = "New Horizons/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -243,11 +243,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_ENTITLEMENTS = Magnum/Entitlements.plist;
+				CODE_SIGN_ENTITLEMENTS = "New Horizons/Entitlements.plist";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Magnum/Prefix.pch;
-				INFOPLIST_FILE = Magnum/Info.plist;
+				GCC_PREFIX_HEADER = "New Horizons/Prefix.pch";
+				INFOPLIST_FILE = "New Horizons/Info.plist";
 				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
@@ -258,7 +258,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		62F32C6F1336C59A000BC6FD /* Build configuration list for PBXProject "Magnum" */ = {
+		62F32C6F1336C59A000BC6FD /* Build configuration list for PBXProject "New Horizons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				62F32C991336C59A000BC6FD /* Debug */,
@@ -267,7 +267,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		62F32C9B1336C59B000BC6FD /* Build configuration list for PBXNativeTarget "Magnum" */ = {
+		62F32C9B1336C59B000BC6FD /* Build configuration list for PBXNativeTarget "New Horizons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				62F32C9C1336C59B000BC6FD /* Debug */,

@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6260AC5B1336F072002DADF2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6260AC581336F072002DADF2 /* Default.png */; };
+		6260AC5C1336F072002DADF2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6260AC591336F072002DADF2 /* Default@2x.png */; };
+		62659A611337055B003F1742 /* Voyager.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62659A601337055B003F1742 /* Voyager.jpg */; };
+		62659A6413370565003F1742 /* Voyager~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62659A6313370565003F1742 /* Voyager~ipad.jpg */; };
 		629106991336E59500C7BD69 /* New Horizons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 629106981336E59500C7BD69 /* New Horizons.jpg */; };
 		6291069B1336E59E00C7BD69 /* New Horizons~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6291069A1336E59E00C7BD69 /* New Horizons~ipad.jpg */; };
 		62963F431336CE43001DEBC4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62963F3F1336CE43001DEBC4 /* Icon.png */; };
 		62963F441336CE43001DEBC4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62963F401336CE43001DEBC4 /* Icon@2x.png */; };
 		62963F451336CE43001DEBC4 /* Icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 62963F411336CE43001DEBC4 /* Icon~ipad.png */; };
+		62EF0BA21336F2D400823F0D /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 62EF0BA11336F2D400823F0D /* Default-Portrait~ipad.png */; };
 		62F32C7A1336C59A000BC6FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F32C791336C59A000BC6FD /* UIKit.framework */; };
 		62F32C7C1336C59A000BC6FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F32C7B1336C59A000BC6FD /* Foundation.framework */; };
 		62F32C7E1336C59A000BC6FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F32C7D1336C59A000BC6FD /* CoreGraphics.framework */; };
@@ -20,12 +25,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6260AC581336F072002DADF2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6260AC591336F072002DADF2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		62659A601337055B003F1742 /* Voyager.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Voyager.jpg; path = iPhone/Voyager.jpg; sourceTree = "<group>"; };
+		62659A6313370565003F1742 /* Voyager~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Voyager~ipad.jpg"; path = "iPad/Voyager~ipad.jpg"; sourceTree = "<group>"; };
 		629106981336E59500C7BD69 /* New Horizons.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "New Horizons.jpg"; path = "iPhone/New Horizons.jpg"; sourceTree = "<group>"; };
 		6291069A1336E59E00C7BD69 /* New Horizons~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "New Horizons~ipad.jpg"; path = "iPad/New Horizons~ipad.jpg"; sourceTree = "<group>"; };
 		62963F3E1336CE43001DEBC4 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		62963F3F1336CE43001DEBC4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		62963F401336CE43001DEBC4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		62963F411336CE43001DEBC4 /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
+		62EF0BA11336F2D400823F0D /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		62F32C751336C59A000BC6FD /* New Horizons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Horizons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62F32C791336C59A000BC6FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		62F32C7B1336C59A000BC6FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,6 +110,9 @@
 				62963F3F1336CE43001DEBC4 /* Icon.png */,
 				62963F401336CE43001DEBC4 /* Icon@2x.png */,
 				62963F411336CE43001DEBC4 /* Icon~ipad.png */,
+				6260AC581336F072002DADF2 /* Default.png */,
+				6260AC591336F072002DADF2 /* Default@2x.png */,
+				62EF0BA11336F2D400823F0D /* Default-Portrait~ipad.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				629106981336E59500C7BD69 /* New Horizons.jpg */,
+				62659A601337055B003F1742 /* Voyager.jpg */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -116,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				6291069A1336E59E00C7BD69 /* New Horizons~ipad.jpg */,
+				62659A6313370565003F1742 /* Voyager~ipad.jpg */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -172,6 +187,11 @@
 				62963F451336CE43001DEBC4 /* Icon~ipad.png in Resources */,
 				629106991336E59500C7BD69 /* New Horizons.jpg in Resources */,
 				6291069B1336E59E00C7BD69 /* New Horizons~ipad.jpg in Resources */,
+				6260AC5B1336F072002DADF2 /* Default.png in Resources */,
+				6260AC5C1336F072002DADF2 /* Default@2x.png in Resources */,
+				62EF0BA21336F2D400823F0D /* Default-Portrait~ipad.png in Resources */,
+				62659A611337055B003F1742 /* Voyager.jpg in Resources */,
+				62659A6413370565003F1742 /* Voyager~ipad.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

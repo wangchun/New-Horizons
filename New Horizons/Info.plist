@@ -33,9 +33,9 @@
 	<key>UIApplicationExitsOnSuspend</key>
 	<true/>
 	<key>UILaunchImageFile</key>
-	<string>New Horizons.jpg</string>
+	<string>Default.png</string>
 	<key>UILaunchImageFile~ipad</key>
-	<string>New Horizons~ipad.jpg</string>
+	<string>Default~ipad.png</string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleBlackOpaque</string>
 	<key>UISupportedInterfaceOrientations</key>

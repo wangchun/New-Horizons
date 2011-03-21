@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		629106991336E59500C7BD69 /* New Horizons.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 629106981336E59500C7BD69 /* New Horizons.jpg */; };
+		6291069B1336E59E00C7BD69 /* New Horizons~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6291069A1336E59E00C7BD69 /* New Horizons~ipad.jpg */; };
 		62963F431336CE43001DEBC4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62963F3F1336CE43001DEBC4 /* Icon.png */; };
 		62963F441336CE43001DEBC4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62963F401336CE43001DEBC4 /* Icon@2x.png */; };
 		62963F451336CE43001DEBC4 /* Icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 62963F411336CE43001DEBC4 /* Icon~ipad.png */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		629106981336E59500C7BD69 /* New Horizons.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "New Horizons.jpg"; path = "iPhone/New Horizons.jpg"; sourceTree = "<group>"; };
+		6291069A1336E59E00C7BD69 /* New Horizons~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "New Horizons~ipad.jpg"; path = "iPad/New Horizons~ipad.jpg"; sourceTree = "<group>"; };
 		62963F3E1336CE43001DEBC4 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		62963F3F1336CE43001DEBC4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		62963F401336CE43001DEBC4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 			children = (
 				62F32C881336C59A000BC6FD /* AppDelegate.h */,
 				62F32C891336C59A000BC6FD /* AppDelegate.m */,
+				62F32C8B1336C59A000BC6FD /* iPhone */,
+				62F32C921336C59A000BC6FD /* iPad */,
 				62F32C801336C59A000BC6FD /* Supporting Files */,
 			);
 			path = Magnum;
@@ -96,6 +102,22 @@
 				62963F411336CE43001DEBC4 /* Icon~ipad.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62F32C8B1336C59A000BC6FD /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				629106981336E59500C7BD69 /* New Horizons.jpg */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		62F32C921336C59A000BC6FD /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				6291069A1336E59E00C7BD69 /* New Horizons~ipad.jpg */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +170,8 @@
 				62963F431336CE43001DEBC4 /* Icon.png in Resources */,
 				62963F441336CE43001DEBC4 /* Icon@2x.png in Resources */,
 				62963F451336CE43001DEBC4 /* Icon~ipad.png in Resources */,
+				629106991336E59500C7BD69 /* New Horizons.jpg in Resources */,
+				6291069B1336E59E00C7BD69 /* New Horizons~ipad.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +201,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -192,7 +216,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;

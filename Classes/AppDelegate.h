@@ -1,33 +1,16 @@
-@class MainViewController;
+@class RootViewController;
 
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
 @private
 	UIWindow *_window;
-	UIImageView *_backgroundImageView;
-	MainViewController *_mainViewController;
-	NSString *_backgroundImageName;
-
+	RootViewController *_rootViewController;
 	NSDictionary *_bodies;
 	NSMutableDictionary *_settings;
-	NSDate *_date;
-	NSMutableDictionary *_data;
 }
 
 @property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) UIImageView *backgroundImageView;
-@property (nonatomic, retain) MainViewController *mainViewController;
-
-@property (nonatomic, retain) NSDictionary *bodies;
-@property (nonatomic, retain) NSMutableDictionary *settings;
-@property (nonatomic, retain) NSDate *date;
-@property (nonatomic, retain) NSMutableDictionary *data;
-
-- (void)loadSettings;
-- (void)saveSettings;
-
-- (NSString *)applicationDocumentsDirectory;
-
-- (void)calculate;
-- (void)reloadData;
+@property (nonatomic, retain) RootViewController *rootViewController;
+@property (nonatomic, assign, readonly) NSDictionary *bodies;
+@property (nonatomic, assign, readonly) NSMutableDictionary *settings;
 
 @end

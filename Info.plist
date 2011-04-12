@@ -17,7 +17,7 @@
 		<string>Icon~ipad.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>wangchun.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>wangchun.MagicNumber</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

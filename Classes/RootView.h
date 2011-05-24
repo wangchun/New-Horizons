@@ -1,3 +1,0 @@
-@interface RootView : UIScrollView
-
-@end

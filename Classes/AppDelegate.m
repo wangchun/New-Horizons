@@ -9,7 +9,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	self.window = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
 	self.rootViewController = [[[RootViewController alloc] init] autorelease];
-	self.rootViewController.view.frame = self.window.bounds;
 	[self.window addSubview:self.rootViewController.view];
 	[self.window makeKeyAndVisible];
 	return YES;
@@ -23,7 +22,7 @@
 }
 
 - (void)applicationSignificantTimeChange:(UIApplication *)application {
-	NSLog(@"applicationSignificantTimeChange:");
+	NSLog(@"applicationSignificantTimeChange:"); // XXX
 }
 
 - (NSDictionary *)bodies {

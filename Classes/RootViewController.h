@@ -1,10 +1,19 @@
-@class RootView;
+@class PageView;
 
-@interface RootViewController : UIViewController {
+@interface RootViewController : UIViewController <UIScrollViewDelegate> {
 @private
-	RootView *_rootView;
+	UIPageControl *_pageControl;
+	UIScrollView *_scrollView;
+	PageView *_pageView;
+	PageView *_nextPageView;
+	PageView *_previousPageView;
+	BOOL pageControlUsed;
 }
 
-@property (nonatomic, retain) RootView *rootView;
+@property (nonatomic, retain) UIPageControl *pageControl;
+@property (nonatomic, retain) UIScrollView *scrollView;
+@property (nonatomic, retain) PageView *pageView;
+@property (nonatomic, retain) PageView *nextPageView;
+@property (nonatomic, retain) PageView *previousPageView;
 
 @end

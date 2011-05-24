@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		620D21A11357F397009F45DE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 620D21A01357F397009F45DE /* CoreFoundation.framework */; };
 		624CB45B13512FA5007944E5 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 624CB45A13512FA5007944E5 /* RootViewController.m */; };
 		6288C534134FB85800C71F69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6288C533134FB85800C71F69 /* UIKit.framework */; };
 		6288C536134FB85800C71F69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6288C535134FB85800C71F69 /* Foundation.framework */; };
@@ -15,7 +16,6 @@
 		6288C544134FB85800C71F69 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6288C543134FB85800C71F69 /* AppDelegate.m */; };
 		6289ACAA134FBBAE00462A35 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6289ACA8134FBB5500462A35 /* iAd.framework */; };
 		628E8F7D135232BD009AE93D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 628E8F7C135232BD009AE93D /* QuartzCore.framework */; };
-		628E8F8013524C20009AE93D /* RootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 628E8F7F13524C20009AE93D /* RootView.m */; };
 		62A62E1B134FB9D700DE78E8 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A62E1A134FB9D700DE78E8 /* Icon.png */; };
 		62A62E1D134FB9E000DE78E8 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A62E1C134FB9E000DE78E8 /* Icon@2x.png */; };
 		62A62E1F134FB9E900DE78E8 /* Icon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 62A62E1E134FB9E900DE78E8 /* Icon~ipad.png */; };
@@ -27,9 +27,11 @@
 		62A62E2D134FBA2D00DE78E8 /* New Horizons~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62A62E2B134FBA2D00DE78E8 /* New Horizons~ipad.jpg */; };
 		62A62E30134FBA3900DE78E8 /* Voyager.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62A62E2E134FBA3900DE78E8 /* Voyager.jpg */; };
 		62A62E31134FBA3900DE78E8 /* Voyager~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 62A62E2F134FBA3900DE78E8 /* Voyager~ipad.jpg */; };
+		62E988CC136DE69700EFBEB3 /* PageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E988CB136DE69700EFBEB3 /* PageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		620D21A01357F397009F45DE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		624CB45913512FA5007944E5 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		624CB45A13512FA5007944E5 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		6288C52F134FB85800C71F69 /* New Horizons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "New Horizons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,8 +45,6 @@
 		6288C543134FB85800C71F69 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6289ACA8134FBB5500462A35 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		628E8F7C135232BD009AE93D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		628E8F7E13524C20009AE93D /* RootView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootView.h; sourceTree = "<group>"; };
-		628E8F7F13524C20009AE93D /* RootView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootView.m; sourceTree = "<group>"; };
 		62A62E1A134FB9D700DE78E8 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		62A62E1C134FB9E000DE78E8 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		62A62E1E134FB9E900DE78E8 /* Icon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon~ipad.png"; sourceTree = "<group>"; };
@@ -56,6 +56,8 @@
 		62A62E2B134FBA2D00DE78E8 /* New Horizons~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New Horizons~ipad.jpg"; sourceTree = "<group>"; };
 		62A62E2E134FBA3900DE78E8 /* Voyager.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Voyager.jpg; sourceTree = "<group>"; };
 		62A62E2F134FBA3900DE78E8 /* Voyager~ipad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Voyager~ipad.jpg"; sourceTree = "<group>"; };
+		62E988CA136DE69700EFBEB3 /* PageView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PageView.h; sourceTree = "<group>"; };
+		62E988CB136DE69700EFBEB3 /* PageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				620D21A11357F397009F45DE /* CoreFoundation.framework in Frameworks */,
 				6288C538134FB85800C71F69 /* CoreGraphics.framework in Frameworks */,
 				6288C536134FB85800C71F69 /* Foundation.framework in Frameworks */,
 				628E8F7D135232BD009AE93D /* QuartzCore.framework in Frameworks */,
@@ -96,6 +99,7 @@
 		6288C532134FB85800C71F69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				620D21A01357F397009F45DE /* CoreFoundation.framework */,
 				6288C537134FB85800C71F69 /* CoreGraphics.framework */,
 				6288C535134FB85800C71F69 /* Foundation.framework */,
 				628E8F7C135232BD009AE93D /* QuartzCore.framework */,
@@ -112,8 +116,8 @@
 				6288C543134FB85800C71F69 /* AppDelegate.m */,
 				624CB45913512FA5007944E5 /* RootViewController.h */,
 				624CB45A13512FA5007944E5 /* RootViewController.m */,
-				628E8F7E13524C20009AE93D /* RootView.h */,
-				628E8F7F13524C20009AE93D /* RootView.m */,
+				62E988CA136DE69700EFBEB3 /* PageView.h */,
+				62E988CB136DE69700EFBEB3 /* PageView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -217,7 +221,7 @@
 				6288C541134FB85800C71F69 /* main.m in Sources */,
 				6288C544134FB85800C71F69 /* AppDelegate.m in Sources */,
 				624CB45B13512FA5007944E5 /* RootViewController.m in Sources */,
-				628E8F8013524C20009AE93D /* RootView.m in Sources */,
+				62E988CC136DE69700EFBEB3 /* PageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

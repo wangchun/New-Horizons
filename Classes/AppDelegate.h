@@ -10,7 +10,7 @@
 
 @property (nonatomic, retain) UIWindow *window;
 @property (nonatomic, retain) RootViewController *rootViewController;
-@property (nonatomic, assign, readonly) NSDictionary *bodies;
-@property (nonatomic, assign, readonly) NSMutableDictionary *settings;
+@property (nonatomic, retain, readonly) NSDictionary *bodies;
+@property (nonatomic, retain, readonly) NSMutableDictionary *settings;
 
 @end

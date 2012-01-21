@@ -1,6 +1,12 @@
-#import <CoreFoundation/CoreFoundation.h>
-#import <CoreGraphics/CoreGraphics.h>
-#import <Foundation/Foundation.h>
-#import <QuartzCore/QuartzCore.h>
-#import <UIKit/UIKit.h>
-#import <iAd/iAd.h>
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <CoreGraphics/CoreGraphics.h>
+	#import <Foundation/Foundation.h>
+	#import <UIKit/UIKit.h>
+	#import <iAd/iAd.h>
+#endif
